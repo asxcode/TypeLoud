@@ -1,0 +1,14 @@
+{
+  "name": "typeloud",
+  "version": "1.0.0",
+  "description": "Piece of code that claim to be a 'text-based social media platform'.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typeloud"
+  ],
+  "author": "arv1nd-s",
+  "license": "ISC"
+}
