@@ -1,7 +1,7 @@
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
 const router = express.Router();
+const feedController = require('../controllers/feed_controller');
 
 router.use('/user', require('./user'));
 
@@ -17,9 +17,7 @@ router.get('/sign-up', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'assets', 'html', 'sign-up.html'));
 });
 
-router.get('/feed', (req, res) => {
-    res.send("<h1>Feed</h1>");
-});
+router.get('/feed', feedController);
 
 router.get('/profile', (req, res) => {
     res.send("<h1>User profile page.</h1>");

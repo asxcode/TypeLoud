@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            TypeLoud
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="leftarea">
+            <a id="createpost" href="/feed/create-post"><b>Create Post</b></a>
+        </div>
+
+        <div id="postarea">
+            <% for(let p of posts) { %>
+            <div class="post">
+                <div class="userinfo">
+                    <b>@<%=p.username%></b>
+                </div>
+                <p><%=p.ptext%></p>
+            </div>
+            <% } %>
+        </div>
+
+        <div id="rightarea">
+        </div>
+
+    </body>
+</html>
