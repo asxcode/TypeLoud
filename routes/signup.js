@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const CreateUser = require('../models/signup');
+const UserData = require('../models/userdata');
 
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'assets', 'html', 'sign-up.html'));
 });
 
 router.post('/submit', (req, res) => {
-    CreateUser.create({
+    UserData.create({
         name: req.body.name,
         uname: req.body.uname,
         email: req.body.email,

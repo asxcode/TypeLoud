@@ -5,13 +5,10 @@ const feedController = require('../controllers/feed_controller');
 
 router.use('/user', require('./user'));
 router.use('/sign-up', require('./signup'));
+router.use('/sign-in', require('./signin'));
 
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'assets', 'html', 'home.html'));
-});
-
-router.get('/sign-in', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'assets', 'html', 'sign-in.html'));
 });
 
 // router.get('/feed', feedController);
